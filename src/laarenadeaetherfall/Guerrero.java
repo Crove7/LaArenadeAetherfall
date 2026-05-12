@@ -11,8 +11,8 @@ package laarenadeaetherfall;
 public class Guerrero  extends Personaje{
 
     public Guerrero(String nombre) {
-        super(nombre,   170,    60,     26,     20,         24);
-            //nombre    vida  energia  ataque  armadura   critico
+        super(nombre,   170,    60,     26,     20);
+            //nombre    vida  energia  ataque  armadura   
     }
 
     @Override

@@ -11,8 +11,9 @@ package laarenadeaetherfall;
 public class Mago extends Personaje {
 
     public Mago(String nombre) {
-        super(nombre, 80,   150,   50,     0,        20);
-         //nombre    vida  energia ataque armadura   critico
+        super(nombre, 80,   150,   50,     0);
+         //nombre    vida  energia ataque armadura  
+        
     }
 
     public Mago() {

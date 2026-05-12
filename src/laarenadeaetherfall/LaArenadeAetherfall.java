@@ -10,9 +10,13 @@ public class LaArenadeAetherfall {
         Arquero arquero1 = new Arquero("Dibu");
         
         Arquero arquero2 = new Arquero("Marchesin");
+        //correcion en arqueros
+        
+        System.out.println(Utilidades.aleatorio());
+        
         do {
             
-            if (arquero1.Aleatorio()>3) {
+            if (arquero1.aleatorio()>3) {
                 arquero2.recibirDanio(arquero1.atacar());
                 saltoDeLinea();limpiar();
                 
