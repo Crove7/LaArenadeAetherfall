@@ -1,9 +1,7 @@
 package laarenadeaetherfall;
 
-import java.util.Scanner;
 
-
-public class LaArenadeAetherfall {
+public class LaArenadeAetherfall extends Utilidades{
 
  
     public static void main(String[] args) {
@@ -40,15 +38,5 @@ public class LaArenadeAetherfall {
         
     }
     
-    public static void saltoDeLinea(){
-        Scanner scan = new Scanner(System.in);
-        System.out.println("PRESIONE ENTER....");
-        String c = scan.nextLine();
-        System.out.println(c);
-    }
-    public static void limpiar(){
-        for (int i = 0; i < 40; i++) {
-            System.out.println();
-        }
-    }
+    
 }
