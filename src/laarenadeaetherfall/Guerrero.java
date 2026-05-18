@@ -8,7 +8,7 @@ package laarenadeaetherfall;
  *
  * @author User
  */
-public class Guerrero  extends Personaje{
+public class Guerrero  extends Personaje implements Utilidades {
 
     public Guerrero(String nombre) {
         super(nombre,   170,    60,     26,     20);

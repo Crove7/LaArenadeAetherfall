@@ -8,7 +8,7 @@ package laarenadeaetherfall;
  *
  * @author User
  */
-public class Mago extends Personaje {
+public class Mago extends Personaje implements Utilidades  {
 
     public Mago(String nombre) {
         super(nombre, 80,   150,   50,     0);
@@ -16,8 +16,6 @@ public class Mago extends Personaje {
         
     }
 
-    public Mago() {
-    }
     
     @Override
     public int atacar() {

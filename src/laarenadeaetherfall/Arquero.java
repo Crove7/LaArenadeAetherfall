@@ -1,8 +1,8 @@
 
 package laarenadeaetherfall;
 
-public class Arquero extends Personaje {
-    private final int costeEnergia=10;
+public class Arquero extends Personaje implements Utilidades{
+    private final int costeEnergia=25;
     public Arquero(String nombre) {
         super(nombre,   126,    70,     26,      14       );
         //   nombre     vida  energia   ataque  armadura   
@@ -13,13 +13,12 @@ public class Arquero extends Personaje {
     @Override
     public int atacar() {
         int danio=0;
-        int dado=0;
         
         System.out.println(nombre+" VA A ATACAR.....");
         if (energia>=costeEnergia) {
             
             
-            switch (aleatorio()) {
+            switch (Utilidades.aleatorio()) {
                 case 1:
                     System.out.println("FALLA EL ATAQUE....");
                     break;
@@ -41,11 +40,11 @@ public class Arquero extends Personaje {
                 
             }
             energia-=costeEnergia;
-            System.out.println("Danio inflingido : "+ danio);
+            //System.out.println("Danio inflingido : "+ danio);
             System.out.println("Gasta " +costeEnergia+" Energia total("+energia+")");
         }else{
-            System.out.println("RECARGA ENERGIA.....");
-            energia=aleatorio()*10;
+            System.out.println("Esta Cansado necesita recuperarse.....");
+            energia=Utilidades.aleatorioSinTexto()*10;
             System.out.println("RECARGO "+ energia +" DE ENERGIA");
             
         }

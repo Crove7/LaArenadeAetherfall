@@ -1,8 +1,8 @@
 package laarenadeaetherfall;
 
-import java.util.Random;
 
-public abstract class Personaje extends Utilidades {
+
+public abstract class Personaje implements Utilidades, Atacante {
 
     protected String nombre;
     protected int vida;
@@ -19,26 +19,25 @@ public abstract class Personaje extends Utilidades {
         this.armadura = armadura;
         
     }
-    //nombre    vida    energia     ataque      armadura      critico
+    //nombre    vida    energia     ataque      armadura      
 
     public Personaje() {
     }
-
     public abstract int atacar();
     
     public void curarse(){
         if (estaVivo()) {
-            vida=+(vida*9+aleatorio())/100;
-            energia+=(energia*9+aleatorio())/100;
+            vida=+(vida*9+Utilidades.aleatorio())/100;
+            energia+=(energia*9+Utilidades.aleatorio())/100;
         }
     }
     public void recibirDanio(int danio) {
         int danioRecibido = 0;
         if (danio > 0) {
-            System.out.println(nombre + " RECIBE DANIO.....");
+            System.out.println(nombre + " SE DEFIENDE.......");
 
             if (vida + armadura/2 > danio) {
-                if (aleatorio() > 3) {
+                if (Utilidades.aleatorio() > 3) {
                     danioRecibido = danio - armadura/2;
                     vida -= danioRecibido;
                 } else {
@@ -48,7 +47,7 @@ public abstract class Personaje extends Utilidades {
                 System.out.println(nombre + " Recibe puntos de danio " + danioRecibido + " tiene " + vida + " puntos de vida");
 
             } else {
-                System.out.println(nombre + " Se debilito...");
+                System.out.println(nombre + " SE DEBILITO.....");
                 vida=0;
             }
         }
