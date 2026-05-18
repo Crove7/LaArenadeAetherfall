@@ -8,9 +8,9 @@ public class LaArenadeAetherfall implements Utilidades {
         //Arquero personaje2 = new Arquero("Marchesin");
         //correcion en arqueros
         Personaje personaje1 = creacionDePersonaje();
-        
+
         Personaje personaje2 = creacionDePersonaje();
-            
+
         do {
 
             if (Utilidades.aleatorioSinTexto() > 3) {
@@ -55,15 +55,12 @@ public class LaArenadeAetherfall implements Utilidades {
         System.out.println("Ingrese el nombre del personaje: ");
         nombre = Utilidades.ingresoTexto();
 
-        // 1. Si eligió aleatorio (4), sacamos el número del 1 al 6
         if (num == 4) {
-            int aleatorio = Utilidades.aleatorioSinTexto(); // Devuelve 1, 2, 3, 4, 5 o 6
+            int aleatorio = Utilidades.aleatorioSinTexto();
 
-            // Convertimos el rango (1 a 6) en un rango de (1 a 3) usando el residuo
             num = (aleatorio % 3) + 1;
         }
 
-        // 2. El switch ahora recibe un 'num' que garantizadamente es 1, 2 o 3
         switch (num) {
             case 1:
                 personaje = new Guerrero(nombre);
